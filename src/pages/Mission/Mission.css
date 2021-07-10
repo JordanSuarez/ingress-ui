@@ -1,0 +1,44 @@
+.mission {
+    color: white;
+    font-weight: 300;
+    margin-top: 2rem;
+}
+
+.mission_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mission_header > div {
+    position: absolute;
+    top: 2.5rem;
+    right: 1rem;
+}
+
+.mission_header_button {
+    width: 12rem;
+    background-color: #287FCA;
+    border: none;
+    color: white;
+    margin-right: 2rem;
+}
+
+.mission_header_button--cancel {
+    background-color: #c83535;
+}
+
+.mission_header_return {
+    color: #287FCA;
+    border: 1px solid #287FCA;
+}
+
+.mission_header_button, .mission_header_return {
+    border-radius: 5px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.mission_map {
+    height: 50vh;
+}

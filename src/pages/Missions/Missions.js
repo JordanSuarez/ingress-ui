@@ -1,23 +1,51 @@
-import { useHistory, generatePath } from "react-router-dom";
+import axios from 'axios';
+import {useState, useEffect} from 'react'
+import { useHistory } from "react-router-dom";
 
-import '../App.css';
-import {missions} from '../data'
-import {useEffect} from "react";
-import Map from "../components/Map";
+import './Missions.css';
+import Map from "../../common/components/Map/Map";
+import Body from "../../common/components/Body/Body";
+import {getMissionRoute} from "../../common/routing/routesResolver";
 
 function Missions() {
   const history = useHistory()
+  const [missions, setMissions] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
 
-  const handleClick = (id) => history.push(generatePath('/mission/:id', {id}))
+  const handleClick = (id) => history.push(getMissionRoute(id))
+
+  const getMissions = async () => {
+    try {
+      const {data} = await axios.get('http://localhost:8741/missions')
+
+      if (data.length > 1) {
+        let formattedData = []
+
+        for (let i = 0; i < data.length; i++) {
+           formattedData.push(data[i])
+        }
+
+        return setMissions(formattedData)
+      }
+
+      return setMissions(data)
+    } catch (e) {
+      return []
+    } finally {
+      setIsLoading(false)
+    }
+  }
 
   useEffect(() => {
-
-  }, [])
+    getMissions();
+  }, [isLoading])
 
   return (
-    <div className="home">
-      <Map items={missions} center={[48.468021, 6.322565]} zoom={8} onClickMarker={handleClick} context='home'/>
-    </div>
+    <Body isLoading={isLoading}>
+      <div className="missions_map">
+        <Map items={missions} center={[48.468021, 6.322565]} zoom={8} onClickMarker={handleClick} context='home'/>
+      </div>
+    </Body>
   );
 }
 
