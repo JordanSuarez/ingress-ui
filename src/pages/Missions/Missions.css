@@ -1,0 +1,14 @@
+.home {
+}
+
+.mission-icon {
+    cursor: pointer;
+}
+
+.mission-icon-accomplish {
+    opacity: 0.5;
+}
+
+.image {
+  width: 3rem;
+}
