@@ -53,11 +53,11 @@
       <recent name="$PROJECT_DIR$/src/pages" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../ingress-ui/src" />
+      <recent name="$PROJECT_DIR$/../ingress-ui/src/common/components/Map" />
       <recent name="$PROJECT_DIR$/src/common" />
       <recent name="$PROJECT_DIR$/src/components/Map" />
       <recent name="$PROJECT_DIR$/src/common/hooks" />
-      <recent name="$PROJECT_DIR$/src/pages/Missions" />
-      <recent name="$PROJECT_DIR$/src/pages/Mission" />
     </key>
   </component>
   <component name="RunManager" selected="npm.npm start">
@@ -83,11 +83,22 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1625832645921</updated>
-      <workItem from="1625832647074" duration="22652000" />
+      <workItem from="1625832647074" duration="24255000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

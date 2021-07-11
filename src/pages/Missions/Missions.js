@@ -16,19 +16,9 @@ function Missions() {
 
   const getMissions = async () => {
     try {
-      const {data} = await axios.get('http://localhost:8741/missions')
+        const {data} = await axios.get('http://localhost:8741/missions')
 
-      if (data.length > 1) {
-        let formattedData = []
-
-        for (let i = 0; i < data.length; i++) {
-           formattedData.push(data[i])
-        }
-
-        return setMissions(formattedData)
-      }
-
-      return setMissions(data)
+        return setMissions(data)
     } catch (e) {
       return []
     } finally {
