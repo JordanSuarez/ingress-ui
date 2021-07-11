@@ -34,7 +34,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages/Missions" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ingress-ui/src/common/components" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -46,6 +46,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../ingress-ui/src/common/components" />
       <recent name="$PROJECT_DIR$/src/pages/Missions" />
       <recent name="$PROJECT_DIR$/src/common/components/Body" />
       <recent name="$PROJECT_DIR$/src/components" />
@@ -82,7 +83,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1625832645921</updated>
-      <workItem from="1625832647074" duration="20334000" />
+      <workItem from="1625832647074" duration="22652000" />
     </task>
     <servers />
   </component>

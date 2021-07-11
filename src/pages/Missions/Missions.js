@@ -43,7 +43,7 @@ function Missions() {
   return (
     <Body isLoading={isLoading}>
       <div className="missions_map">
-        <Map items={missions} center={[48.468021, 6.322565]} zoom={8} onClickMarker={handleClick} context='home'/>
+        <Map items={missions} center={[48.468021, 6.322565]} zoom={8} onClickMarker={handleClick} context='home' offset={[0, -11]}/>
       </div>
     </Body>
   );

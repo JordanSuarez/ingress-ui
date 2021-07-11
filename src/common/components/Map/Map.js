@@ -1,10 +1,10 @@
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import { MapContainer, TileLayer, Marker, Tooltip } from 'react-leaflet'
 import L from 'leaflet';
 
 import './Map.css'
 import {useLocalStorage} from "../../hooks/localStorage";
 
-function Map({center, items, zoom, onClickMarker, context}) {
+function Map({center, items, zoom, onClickMarker, context, offset}) {
     const [missionsAccomplished,] = useLocalStorage('missions', [])
 
     const newIcon = (iconUrl, id) => L.icon({
@@ -25,7 +25,7 @@ function Map({center, items, zoom, onClickMarker, context}) {
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-          {itemsFormatted.map(({coords, name, type, icon, id}) => {
+          {itemsFormatted.map(({coords, name, icon, id}) => {
               return (
                   <Marker
                       position={coords}
@@ -34,8 +34,9 @@ function Map({center, items, zoom, onClickMarker, context}) {
                       eventHandlers={{
                           click: () => id ? onClickMarker(id) : () => {},
                       }}
+
                   >
-                      <Popup>{name}</Popup>
+                      <Tooltip direction="top" offset={offset}>{name}</Tooltip>
                   </Marker>
               )
           })}

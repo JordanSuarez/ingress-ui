@@ -65,7 +65,7 @@ function Mission() {
                   </ul>
               </section>
               <section className="mission_map">
-              <Map items={mission.waypoints} center={mission.coords} zoom={15} context='mission'/>
+              <Map items={mission.waypoints} center={mission.coords} zoom={15} context='mission' offset={[-15, -11]}/>
           </section>
           </div>
       </Body>
